@@ -1,13 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types'
+import React, { useState } from "react";
+import PropTypes from 'prop-types';
+import NavLinks from './NavLinks';
 
 function Produce(props){
   var month = {
     backgroundColor: "#939665",
     padding: "8px",
     borderRadius: "8px",
-    margin: "8px",
-    width: "60%"
+    margin: "0 auto",
+    marginBottom: "20px",
+    width: "100%",
+    fontFamily: "'Prata', serif"
   }
 
   var monthTitle = {
@@ -20,7 +23,9 @@ function Produce(props){
     border: "2px solid #8f8865"
   }
 
+  const [showText, setShowText] = useState(false);
   return(
+  <div>{showText && <div>This text will show!</div>}
     <div style={month}>
       <h2 style={monthTitle}>Month - {props.month}</h2>
       <ul style={produceSelection}>- Available Selection -
@@ -28,6 +33,7 @@ function Produce(props){
           return <li key={index}>{item}</li>
         })}
       </ul>
+    </div>
     </div>
   );
 }

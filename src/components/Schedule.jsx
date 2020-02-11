@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Table from 'react-bootstrap/Table'
 
 function Schedule(props){
   return(
     <div>
-          <table>
+          <Table className="tableDate" striped bordered hover variant="dark">
             <style jsx>{`
-                table {
-                  border: 4px solid black;
-                  width: 40%;
-                  margin-left: 20px;
+
+                Table {
+                  font-family: 'Zilla Slab', serif;
                 }
 
+                .tableDate {
+                  margin: 0 auto;
+                  width:60%;
+                }
                 td {
                   width: 25%;
                 }
@@ -19,19 +23,14 @@ function Schedule(props){
                   border-bottom: 2px solid black;
                 }
                 `}</style>
-        <tr>
-          <th>Day</th>
-          <th>Location</th>
-          <th>Hours</th>
-          <th>Booth</th>
-        </tr>
+
         <tr>
           <td>{props.day}</td>
           <td>{props.location}</td>
           <td>{props.hours}</td>
           <td> {props.booth}</td>
         </tr>
-      </table>
+      </Table>
     </div>
   );
 }

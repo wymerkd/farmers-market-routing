@@ -42,7 +42,7 @@ const marketSchedule = [
 
 function Information() {
   return(
-    <div>
+    <div id="displaySchedule">
       <hr/>
       {marketSchedule.map((market, index) =>
         <Schedule day={market.day}
