@@ -4,10 +4,34 @@ import PropTypes from 'prop-types';
 function Schedule(props){
   return(
     <div>
-      <h2>Day - {props.day}</h2>
-      <h3>Location - {props.location}</h3>
-      <h3>Hours - {props.hours}</h3>
-      <h3>Booth - {props.booth}</h3>
+          <table>
+            <style jsx>{`
+                table {
+                  border: 4px solid black;
+                  width: 40%;
+                  margin-left: 20px;
+                }
+
+                td {
+                  width: 25%;
+                }
+                th {
+                  border-bottom: 2px solid black;
+                }
+                `}</style>
+        <tr>
+          <th>Day</th>
+          <th>Location</th>
+          <th>Hours</th>
+          <th>Booth</th>
+        </tr>
+        <tr>
+          <td>{props.day}</td>
+          <td>{props.location}</td>
+          <td>{props.hours}</td>
+          <td> {props.booth}</td>
+        </tr>
+      </table>
     </div>
   );
 }

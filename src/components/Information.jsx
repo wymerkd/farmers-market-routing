@@ -41,8 +41,6 @@ const marketSchedule = [
 ];
 
 function Information() {
-
-
   return(
     <div>
       <hr/>

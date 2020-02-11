@@ -1,12 +1,15 @@
 import React from "react";
+import Nav from "react-bootstrap/Nav"
 
 function NavLinks(){
   return(
     <div>
-      <a href="/">Home</a>
-      <a href="/">Local Markets</a>
-      <a href="/">Contact</a>
-      <a href="/">Volunteer</a>
+      <Nav className="mr-auto">
+        <Nav.Link href="#home">Home</Nav.Link>
+        <Nav.Link href="#link">Link</Nav.Link>
+        <Nav.Link href="#link">Contact</Nav.Link>
+        <Nav.Link href="#link">Volunteer</Nav.Link>
+      </Nav>
     </div>
   );
 }
