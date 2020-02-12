@@ -2,6 +2,9 @@ import React, { useState }  from 'react';
 import Header from './components/Header';
 import Information from './components/Information';
 import SeasonalProduce from './components/SeasonalProduce';
+import NewMarket from './components/NewMarket';
+import { Switch, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './components/fonts.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,6 +20,9 @@ function App() {
   return (
     <div style={body}>
       <Header/>
+      <Switch>
+        <Route exact path='/newmarket' component={NewMarket} />
+      </Switch>
       <Information/>
       <SeasonalProduce/>
     </div>
