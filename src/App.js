@@ -21,12 +21,16 @@ function App() {
     <div style={body}>
       <Header/>
       <Switch>
-        <Route exact path='/newmarket' component={NewMarket} />
+        <Route exact path='/' component={Information} />
+        // <Route exact path='/' component={SeasonalProduce} />
+        <Route path='/newmarket' component={NewMarket} />
+        <Route path='/produce' component={SeasonalProduce} />
       </Switch>
-      <Information/>
-      <SeasonalProduce/>
     </div>
   );
 }
 
 export default App;
+
+// <SeasonalProduce/>
+// <Information/>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import Nav from "react-bootstrap/Nav"
 import Produce from './Produce'
 
@@ -27,10 +28,11 @@ if (scheduleDisplay.style.display == "none") {
   return(
     <div>
       <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href='#' onClick={handleClick}>Produce</Nav.Link>
+        <Link to="/">Home</Link>
+        <Link to="/produce">Produce</Link>
         <Nav.Link href="#" onClick={handleClick2}>Schedule</Nav.Link>
         <Nav.Link href="#link">Volunteer</Nav.Link>
+        <Link to="/newmarket">New Market</Link>
       </Nav>
     </div>
   );
